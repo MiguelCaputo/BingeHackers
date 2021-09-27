@@ -1,48 +1,54 @@
-# BingeHackers
+# BingeHacker v1.0
 
-IMDB Scrapper and Offline Database using Binary Tree Algorithms
+# Authors
+Miguel Caputo, Juan Gonzalez, and Nathan Whelden
 
-**Team Name:** BingeHackers    
- 
-**Team Members:** Miguel Caputo, Juan Gonzalez, Nathan Whelden
- 
-# Problem: What problem are we trying to solve?
+## Description:
 
-IMDb is an online database containing millions of entries on media, including information on tv series, movies, actors, reviews, and more.  IMDb’s datasets are publicly available; however, they are unorganized and each contains over a million tuples of data. IMDb’s dataset on television series, short films, and movies alone contains over 1.5 million entries, presenting an issue for a user who wants to find information on a tv series.
+This program is designed to provide information on TV series. The program lets you, the user, choose between two different data structures (AVL Tree or Map) to store this information and will provide you with the run time of each data structure, as well as the option to switch between them. The information you will find here will be the name of the TV series, the IMDb ID code, the start and end year, and the genres. The program will allow you to search for TV series by name, by keyword, or randomly search for a TV series. This program also has an additional feature which will take you directly to the IMDb webpage of the TV series being displayed if you choose to do so. For a video demonstration of this program and its features please visit the following link: https://youtu.be/cYSQ_O3vyFk
 
-# Motivation: Why is this a problem?
+The Python_code.txt included was used to reformat the IMDb dataset from a .tsv into a .csv, and trimmed the original data to 146,000 tuples by only including TV series created after 1989.
 
-In the case that IDMb’s platform was down, a user would have to rely on the datasets for information.  Unfortunately, trying to manually check through each entry of a dataset to find a single tv series would take hours.  A user does not have the patience or time to manually search through this much data, so a program that can quickly search for the desired information in a few seconds would be a preferable alternative.
+## Instructions:
+Begin by opening the Zip file named Code_Group28.zip. Open your computer's command-line interface. Make sure you are in the source folder directory and then type the following command:
 
-# Features: When do we know that we have solved the problem?
+```g++ BingeHacker.cpp -o BingeHacker```
 
-We would know that the stated problem is solved when the user is able to search for information about a desired television show without needing to use the IMDB website or any resource outside our program.
+This command should have created a new executable called BingeHacker.exe in the source folder. To run the program, enter ./BingeHacker in the command-line, or launch the executable that was created in the directory.
 
-Our program will load tuples of data from IMDb’s dataset on television series, short films, and movies.  To narrow the scope of the project from over a million entries of data to under two hundred thousand, only entries related to television series will be used.  After the data has been loaded into a stream, the user will then be able to choose which data structure they want to store the entries into.  Each entry will be stored as an object, with object members containing information such as name, runtime, and genre.  The user will then be prompted to search for a television series by providing a title.  If the series is found, the information from the respective dataset entry will be displayed.
+Note: If your computer uses the Windows OS, you will need a GNU c++ compiler. You may need to use the PowerShell command-line interface in order to run the program.
 
-# Data
+**The program should show you a main menu with 3 options:**
 
-Public data set we will be using and the link to the public data set) or (Schema of randomly generated data - i.e. what are the different columns in our dataset and the respective data types) 
+1. Save the data of the shows using a Map Structure.
+2. Save the data of the shows using an AVL Tree Structure.
+3. Exit the program.
 
-For the project, we would use a publicly available .tsv file containing all the relevant information for tv series, movies, and shorts that the IMDB website uses. The information contained in the data set by different columns is:
+- If you input option 1 or 2, the program will load the data in the shows.txt file to the corresponding data structure.
+- If you input option 3, the program will terminate.
 
-- **tconst**: A combination of characters that when included at the end of https://www.imdb.com/title/ can give us easy access to the IMDB webpage of the series.
-- **titleType**: A string that can be either, short, movie, video, tvEpisode, tvSeries, tvMovie or tvMiniSeries.
-- **primaryTitle**: A string containing the name of the show.
-- **originalTitle**: If the show name was translated from its original language, this column includes the original name.
-- **isAdult**: A boolean expression containing a 0 if the show is not adult-rated or a 1 if it is.
-- **starterYear**: An int containing the year when the show was started.
-- **endYear**: An int containing the year when the show ended if available.
-- **runtimeMinutes**: An int containing the length of each episode or the full length of each show.
-- **genres**: An string containing all the genres of the show, each one separated by a “,”
+After inputting option 1 or 2, the program will show you a search menu with 5 options:
+1. Search for a show by name.
+2. Search for multiple shows by a keyword.
+3. Find a random show.
+4. Change the data structure used.
+5. Exit the program.
 
-For the data set, each column is separated by tabs and for any show that there is no information available for in one of these columns, the data set would have an “\N”. 
-This data set contains almost 1.6 million shows, so for the purpose of this project, it would be reduced to just non-adult “tvSeries” after 1990, and also we would erase all titles without a complete relevant data set. In addition, we are thinking of maybe adding another column that would contain the rating for each show, but we are not sure yet.
+- If you input option 1, the program will prompt you to input the name of the show. If the TV show is found, the program will ask if you would like to go to the IMDb website for the show and will show you a menu with 2 options:
+    1.Yes
+    2. No
+    - If you input option 1, the program will open your browser and take you to the website of that show.
+    - If you input option 2, the program will take you back to the search menu.
+- If you input option 2, the program will prompt you to input the keyword for your search.
+- If you input option 3, the program will find a random show for you. Then the program will ask if you would like to go to the IMDB website for the show and will show you a menu with 2 options:
+    1.Yes
+    2. No
+    - If you input option 1, the program will open your browser and take you to the website of that show.
+    - If you input option 2, the program will take you back to the search menu.
+- If you input option 4, the program will take you back to the main menu.
+- If you input option 5, the program will terminate.
 
-# Tools: Programming languages or any tools/frameworks we will be using.
+We hope you enjoyed using BingeHacker v1.0!
 
-For this project, we will be using Python and C++. We plan on using Python code to trim the data set. We plan on using C++ for the rest of the project, such as the implementation of the data structures, algorithms, functions, and the user menu.
 
-# References
 
-https://datasets.imdbws.com/
