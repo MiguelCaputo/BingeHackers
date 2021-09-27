@@ -7,7 +7,7 @@ Miguel Caputo, Juan Gonzalez, and Nathan Whelden
 
 This program is designed to provide information on TV series. The program lets you, the user, choose between two different data structures (AVL Tree or Map) to store this information and will provide you with the run time of each data structure, as well as the option to switch between them. The information you will find here will be the name of the TV series, the IMDb ID code, the start and end year, and the genres. The program will allow you to search for TV series by name, by keyword, or randomly search for a TV series. This program also has an additional feature which will take you directly to the IMDb webpage of the TV series being displayed if you choose to do so. For a video demonstration of this program and its features please visit the following link: https://youtu.be/cYSQ_O3vyFk
 
-The Python_code.txt included was used to reformat the IMDb dataset from a .tsv into a .csv, and trimmed the original data to 146,000 tuples by only including TV series created after 1989.
+The clean_database.py included was used to reformat the IMDb dataset from a .tsv into a .csv, and trimmed the original data to 146,000 tuples by only including TV series created after 1989.
 
 ## Instructions:
 Begin by opening the Zip file named Code_Group28.zip. Open your computer's command-line interface. Make sure you are in the source folder directory and then type the following command:
