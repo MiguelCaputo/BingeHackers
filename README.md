@@ -10,7 +10,7 @@ This program is designed to provide information on TV series. The program lets y
 The clean_database.py included was used to reformat the IMDb dataset from a .tsv into a .csv, and trimmed the original data to 146,000 tuples by only including TV series created after 1989.
 
 ## Instructions:
-Begin by opening the Zip file named Code_Group28.zip. Open your computer's command-line interface. Make sure you are in the source folder directory and then type the following command:
+Begin by downloading  file named BingeHacker.cpp Open your computer's command-line interface. Make sure you are in the source folder directory and then type the following command:
 
 ```g++ BingeHacker.cpp -o BingeHacker```
 
